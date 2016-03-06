@@ -1,8 +1,6 @@
-#bind = "0.0.0.0:8080"
-#pythonpath = "/home/box/web"
-
-def app(environ, start_response):
-    args = environ['QUERY_STRING']
-    args.replace("&", "\n")
-    start_response("200 OK", [("Content-Type", "text/plain")])
-    return iter([args])
+def app(env, start_responce):
+    status = '200 OK'
+    headers = [('Content-Type', 'text/plain')]
+    body = '\r\n'.join(env['QUERY_STRING'].split('&'))
+    start_responce(status, headers)
+    return body
