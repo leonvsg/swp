@@ -1,5 +1,5 @@
-def app(env, start_respone):
-    args = env['QUERY_STRING']
+def app(environ, start_response):
+    args = environ['QUERY_STRING']
     args.replace("&", "\n")
-    start_respone("200 OK", [("Content-Type", "text/plain")])
-    return iter([args])
+    start_response("200 OK", [("Content-Type", "text/plain")])
+    return args
