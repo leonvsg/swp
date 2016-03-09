@@ -4,7 +4,7 @@ from django.db import models
 class Question(models.Model):
     title = models.CharField()
     text = models.TextField()
-    added_at - models.DateTimeField()
+    added_at = models.DateTimeField()
     rating = models.IntegerField()
     author = models.ForeignKey(User)
     likes = models.ManyToManyField(User)
