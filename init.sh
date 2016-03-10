@@ -5,3 +5,4 @@ sudo ln -sf /home/box/etc/gunicorn.conf /etc/gunicorn.d/test
 sudo /etc/init.d/gunicorn restart
 sudo /etc/init.d/mysql start
 sudo mysql -uroot -e "CREATE DATABASE ask;"
+sudo python ask/manage.py validate
