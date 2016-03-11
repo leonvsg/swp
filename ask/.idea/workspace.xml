@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c34c852c-cc05-4055-9864-8ea9c91d002f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qa/urls.py" afterPath="$PROJECT_DIR$/qa/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qa/views.py" afterPath="$PROJECT_DIR$/qa/views.py" />
     </list>
     <ignored path="ask.iws" />
@@ -54,8 +53,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qa/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26750448">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.29802513">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -535,14 +534,20 @@
       <option name="project" value="LOCAL" />
       <updated>1457701213727</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update question view">
+      <created>1457701536982</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1457701536982</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19667171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19667171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -570,7 +575,8 @@
     <MESSAGE value="update project" />
     <MESSAGE value="update models" />
     <MESSAGE value="update router" />
-    <option name="LAST_COMMIT_MESSAGE" value="update router" />
+    <MESSAGE value="update question view" />
+    <option name="LAST_COMMIT_MESSAGE" value="update question view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -723,8 +729,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/qa/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26750448">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.29802513">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>

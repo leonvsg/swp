@@ -11,7 +11,7 @@ def test(request, *args, **kwargs):
 
 @require_GET
 def get_question(request, pk):
-    question = get_object_or_404(Question, id=pk)
+    question = get_object_or_404(Question, pk=pk)
     return render(request, '../templates/question.html', {
         'question': question,
         'answers': question.answer_set.all(),
