@@ -10,8 +10,8 @@ def test(request, *args, **kwargs):
     return HttpResponse('OK', status=200)
 
 @require_GET
-def get_question(request, id):
-    question = get_object_or_404(Question, id=id)
+def get_question(request, pk):
+    question = get_object_or_404(Question, id=pk)
     return render(request, '../templates/question.html', {
         'question': question,
         'answers': question.answer_set.all(),
