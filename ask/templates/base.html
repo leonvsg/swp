@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}Q&A{% endblock %}</title>
+	{% block extrahead %}{% endblock %}
 </head>
 <body>
-
+    <h1><a href="/">Вопросы и ответы</a></h1>
+	<p> {{ user }}</p>
+	{% block content %}{% endblock %}
 </body>
 </html>

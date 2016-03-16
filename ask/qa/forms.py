@@ -21,13 +21,17 @@ class AnswerForm(forms.Form):
     text = forms.TextField(widget=forms.Textarea)
     question = forms.CharFeld()
 
+    def __init__(self, user, **kwargs):
+        self._user = user
+        super(AnswerForm, self).__init__(**kwargs)
+
     def clean_question(self):
         question = self.cleaned_data['question']
         try:
             question = Question.objects.get(question)
             return question
         except:
-            raise forms.ValidationError
+            raise forms.ValidationError('Question not found')
 
     def save(self):
         answer = Answer(**self.cleaned_data)

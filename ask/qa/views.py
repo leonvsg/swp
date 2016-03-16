@@ -1,8 +1,8 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from django.views.decorators.http import require_GET
+from django.views.decorators.http import require_GET, require_POST
 
-from qa.forms import AskForm
+from qa.forms import AskForm, AnswerForm
 from qa.helper import paginate
 from qa.models import Question
 
@@ -18,23 +18,32 @@ def add_ask(request):
             question = form.save()
             url = question.get_url()
             return HttpResponseRedirect(url)
+        else:
+            print(form.is_bound)
     else:
         form = AskForm()
-    return render(request, '../templates/qa/add_ask.html', {
+    return render(request, '../templates/qa/ask.html', {
         'form': form,
     })
 
 
+@require_POST
 def add_answer(request):
-    return render(request)
+    form = AnswerForm(request.POST)
+    if form.is_valid():
+        answer = form.save()
+        url = answer.question.get_url()
+        return HttpResponseRedirect(url)
 
 
 @require_GET
 def get_question(request, id):
     question = get_object_or_404(Question, id=id)
+    form = AnswerForm()
     return render(request, '../templates/qa/question.html', {
         'question': question,
         'answers': question.answer_set.all(),
+        'form': form
     })
 
 

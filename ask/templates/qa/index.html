@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>index</title>
-</head>
-<body>
-<h1>Latest questions</h1>
-<hr>
+{% extends "base.html" %}
+
+{% block title %}
+	{{ block.super }} - Last questions
+{% endblock %}
+
+{% block content %}
+    <h1>Last questions</h1>
 {% for question in questions %}
-    <a href="{{ question.get_url }}">
+	<a href="{{ question.get_url }}">
         <h2>{{ question.title }}</h2>
     </a>
 {% endfor %}
+
 <nav>
     <ul class="pagination">
         {% for p in paginator.page_range %}
@@ -27,5 +27,4 @@
         {% endfor %}
     </ul>
 </nav>
-</body>
-</html>
+{% endblock %}
