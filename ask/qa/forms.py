@@ -18,8 +18,8 @@ class AskForm(forms.Form):
 
 
 class AnswerForm(forms.Form):
-    text = forms.TextField(widget=forms.Textarea)
-    question = forms.CharFeld()
+    text = forms.CharField(widget=forms.Textarea)
+    question = forms.IntegerFeld()
 
     def __init__(self, user, **kwargs):
         self._user = user
