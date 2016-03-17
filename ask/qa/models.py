@@ -4,7 +4,7 @@ from django.db import models
 
 class Question(models.Model):
     title = models.CharField(max_length=255)
-    text = models.CharField()
+    text = models.CharField(max_length=1500)
     added_at = models.DateTimeField(auto_now_add=True)
     rating = models.IntegerField(null=False, default=0)
     author = models.ForeignKey(User, related_name='question_set_1', on_delete=models.CASCADE)
@@ -21,7 +21,7 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
-    text = models.CharField()
+    text = models.CharField(max_length=1500)
     added_at = models.DateTimeField(auto_now_add=True)
     question = models.ForeignKey(Question, null=False, on_delete=models.CASCADE)
     author = models.ForeignKey(User)
