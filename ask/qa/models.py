@@ -14,7 +14,7 @@ class Question(models.Model):
         return self.title
 
     def get_url(self):
-        return '/question/%d/' %self.id
+        return '/question/%d/' % self.id
 
     class Meta:
         ordering = ['-added_at']
