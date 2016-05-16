@@ -21,7 +21,7 @@ def add_ask(request):
         else:
             print(form.is_bound)
     else:
-        form = AskForm()
+        form = AskForm(request.GET)
     return render(request, '../templates/qa/ask.html', {
         'form': form,
     })

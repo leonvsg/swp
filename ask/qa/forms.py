@@ -1,15 +1,14 @@
-from django.forms import forms
-
+from django import forms
 from qa.models import Question, Answer
 
 
 class AskForm(forms.Form):
-    title = forms.CharField(max_length=255)
+    title = forms.CharField(max_length=255, widget=forms.TextInput)
     text = forms.CharField(widget=forms.Textarea)
 
     def __init__(self, user, **kwargs):
         self._user = user
-        super(AskForm, self).__init__(**kwargs)
+        super(AskForm, self).__init__(self.base_fields)
 
     def save(self):
         question = Question(**self.cleaned_data)
@@ -19,7 +18,7 @@ class AskForm(forms.Form):
 
 class AnswerForm(forms.Form):
     text = forms.CharField(widget=forms.Textarea)
-    question = forms.IntegerFeld()
+    question = forms.IntegerField()
 
     def __init__(self, user, **kwargs):
         self._user = user
@@ -28,7 +27,7 @@ class AnswerForm(forms.Form):
     def clean_question(self):
         question = self.cleaned_data['question']
         try:
-            question = Question.objects.get(question)
+            self.question = Question.objects.get(question)
             return question
         except:
             raise forms.ValidationError('Question not found')
